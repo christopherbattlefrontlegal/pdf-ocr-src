@@ -1,0 +1,66 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "main": ["<pdf-ocr-arm64-apple-macosx-release.exe>","<pdf-ocr-arm64-apple-macosx-release.module>"]
+  "pdf-ocr-arm64-apple-macosx-release.exe": ["<pdf-ocr-arm64-apple-macosx-release.exe>"]
+  "pdf-ocr-arm64-apple-macosx-release.module": ["<pdf-ocr-arm64-apple-macosx-release.module>"]
+  "test": ["<pdf-ocr-arm64-apple-macosx-release.exe>","<pdf-ocr-arm64-apple-macosx-release.module>"]
+default: "main"
+nodes:
+  "/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+commands:
+  "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swift.o"]
+    outputs: ["/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr.product/Objects.LinkFileList"
+
+  "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/main.swift"]
+    outputs: ["/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources"]
+    description: "Write auxiliary file /Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources"
+
+  "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/swift-version-777C3A320B5418A4.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/swift-version-777C3A320B5418A4.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/swift-version-777C3A320B5418A4.txt"
+
+  "<pdf-ocr-arm64-apple-macosx-release.exe>":
+    tool: phony
+    inputs: ["/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr"]
+    outputs: ["<pdf-ocr-arm64-apple-macosx-release.exe>"]
+
+  "<pdf-ocr-arm64-apple-macosx-release.module>":
+    tool: phony
+    inputs: ["/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swift.o","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/Modules/pdf_ocr.swiftmodule"]
+    outputs: ["<pdf-ocr-arm64-apple-macosx-release.module>"]
+
+  "C.pdf-ocr-arm64-apple-macosx-release.exe":
+    tool: shell
+    inputs: ["/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swift.o","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr.product/Objects.LinkFileList"]
+    outputs: ["/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr"]
+    description: "Linking ./.build/arm64-apple-macosx/release/pdf-ocr"
+    args: ["/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc","-L","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release","-o","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr","-module-name","pdf_ocr","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-dead_strip","-Xlinker","-alias","-Xlinker","_pdf_ocr_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr.product/Objects.LinkFileList","-target","arm64-apple-macosx26.0","-I","/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/macosx/testing","-L","/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/macosx/testing","-plugin-path","/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.pdf-ocr-arm64-apple-macosx-release.module":
+    tool: shell
+    inputs: ["/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/main.swift","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/swift-version-777C3A320B5418A4.txt","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources"]
+    outputs: ["/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swift.o","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/Modules/pdf_ocr.swiftmodule"]
+    description: "Compiling Swift Module 'pdf_ocr' (1 sources)"
+    args: ["/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc","-module-name","pdf_ocr","-emit-dependencies","-emit-module","-emit-module-path","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/Modules/pdf_ocr.swiftmodule","-output-file-map","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/output-file-map.json","-whole-module-optimization","-num-threads","28","-c","@/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources","-I","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/Modules","-target","arm64-apple-macosx26.0","-whole-module-optimization","-num-threads","28","-serialize-diagnostics","-O","-j28","-DSWIFT_PACKAGE","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","pdf_ocr_main","-parse-as-library","-swift-version","6","-I","/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/macosx/testing","-L","/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/macosx/testing","-plugin-path","/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","pdf_ocr_src"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/","/Users/studio/bin/pdf-ocr-src/Package.swift","/Users/studio/bin/pdf-ocr-src/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr'
+relocations:     []
+...

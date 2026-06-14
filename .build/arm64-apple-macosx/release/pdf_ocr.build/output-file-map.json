@@ -1,0 +1,13 @@
+{
+  "": {
+    "dependencies": "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/pdf_ocr.d",
+    "object": "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/pdf_ocr.o",
+    "swift-dependencies": "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/primary.swiftdeps"
+  },
+  "/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/main.swift": {
+    "object": "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swift.o",
+    "swiftmodule": "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main~partial.swiftmodule",
+    "swift-dependencies": "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swiftdeps",
+    "diagnostics": "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.dia"
+  }
+}

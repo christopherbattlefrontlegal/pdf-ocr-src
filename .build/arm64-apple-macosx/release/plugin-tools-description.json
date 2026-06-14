@@ -1,0 +1,241 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.pdf-ocr-arm64-apple-macosx-release.module" : {
+      "executable" : "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources",
+      "importPath" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/main.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/swift-version-777C3A320B5418A4.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "pdf_ocr",
+      "moduleOutputPath" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/Modules/pdf_ocr.swiftmodule",
+      "objects" : [
+        "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx26.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "28",
+        "-serialize-diagnostics",
+        "-O",
+        "-j28",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "pdf_ocr_main",
+        "-parse-as-library",
+        "-swift-version",
+        "6",
+        "-I",
+        "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-L",
+        "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+        "-plugin-path",
+        "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "pdf_ocr_src"
+      ],
+      "outputFileMapPath" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/Modules/pdf_ocr.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/main.swift"
+      ],
+      "tempsPath" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "pdf_ocr" : [
+      "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "pdf_ocr",
+      "-package-name",
+      "pdf_ocr_src",
+      "-c",
+      "/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/main.swift",
+      "-I",
+      "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx26.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "28",
+      "-serialize-diagnostics",
+      "-O",
+      "-j28",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "pdf_ocr_main",
+      "-parse-as-library",
+      "-swift-version",
+      "6",
+      "-I",
+      "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+      "-L",
+      "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/macosx/testing",
+      "-plugin-path",
+      "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "pdf_ocr_src",
+      "-driver-use-frontend-path",
+      "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "pdf_ocr" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/main.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf-ocr.product/Objects.LinkFileList"
+    },
+    "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/studio/bin/pdf-ocr-src/Sources/pdf-ocr/main.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/pdf_ocr.build/sources"
+    },
+    "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/swift-version-777C3A320B5418A4.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/studio/Library/Developer/Toolchains/swift-6.3.1-RELEASE.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/studio/bin/pdf-ocr-src/.build/arm64-apple-macosx/release/swift-version-777C3A320B5418A4.txt"
+    }
+  }
+}
